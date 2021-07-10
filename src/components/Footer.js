@@ -1,8 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components/macro";
 import { Link } from "react-router-dom";
-import { Button } from "./Button";
-import { IoMdArrowRoundForward } from "react-icons/io";
+// import { Button } from "./Button";
+// import { IoMdArrowRoundForward } from "react-icons/io";
 // import {
 //   FaInstagram,
 //   FaFacebookF,
@@ -33,24 +33,25 @@ const FooterTop = styled.div`
     flex-direction: column;
   }
 `;
-const Quote = styled.div`
-  flex: 1;
-  padding: 2rem 1rem;
-  ${
-    "" /* @media screen and (max-width: 768px) {
+// const Quote = styled.div`
+//   flex: 1;
+//   padding: 2rem 5rem;
+
+// ${
+/* @media screen and (max-width: 768px) {
     padding: 1rem 1rem;
     display: flex;
     justify-content: center;
     margin: auto; */
-  }
-  }
+// }
+// }
 
-  h3 {
-    font-size: clamp(2rem, 8vw, 5rem);
-    display: flex;
-    justify-content: center;
-  }
-`;
+//   h3 {
+//     font-size: clamp(2rem, 8vw, 5rem);
+//     display: flex;
+//     justify-content: center;
+//   }
+// `;
 const FooterInfo = styled.div`
   padding: 2rem;
   max-width: 500px;
@@ -107,32 +108,37 @@ const FooterBottom = styled.div`
 //   ${Icons}
 // `;
 
-const Contact = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  }
+// const Contact = styled.div`
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   }
 
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    justify-content: center;
-  }
-`;
+//   @media screen and (max-width: 768px) {
+//     width: 100%;
+//     justify-content: center;
+//   }
+// `;
 
 const Footer = () => {
   return (
     <Section>
       <Container>
         <FooterTop>
-          <Quote>
+          {/* <Quote>
             <h3>Let's Find Your Dream Career</h3>
-          </Quote>
+          </Quote> */}
         </FooterTop>
         <FooterInfo>
           <h4>Contact Us</h4>
           <Link to="/">Home</Link>
           <Link to="/about-us">About Us</Link>
           <Link to="/current-opportunities">Current Opportunities</Link>
+          {/* <a
+            href="//www.google.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          ></a> */}
         </FooterInfo>
         {/* <FooterInfo>
             <h4>Offices</h4>
@@ -172,11 +178,11 @@ const Footer = () => {
               <LinkedIn />
             </a> */}
           {/* </SocialIcons> */}
-          <Contact>
+          {/* <Contact>
             <Button to="/contact-us">
               Let's Chat <IoMdArrowRoundForward />
             </Button>
-          </Contact>
+          </Contact> */}
         </FooterBottom>
       </Container>
     </Section>

@@ -79,7 +79,7 @@ const InfoSection = ({
           </Button>
         </ColumnLeft>
         <ColumnRight reverse={reverse}>
-          <img src={image} alt="home" />
+          <img src={image} alt="recruiting" />
         </ColumnRight>
       </Container>
     </Section>

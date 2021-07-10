@@ -9,7 +9,6 @@ const HeroSection = styled.section`
   max-height: 1100px;
   position: relative;
   overflow: hidden;
-  z-index: -1;
 `;
 
 const HeroWrapper = styled.div`
@@ -75,17 +74,21 @@ const HeroContent = styled.div`
 
 h1{
    font-size: clamp(1rem, 8vw, 2rem);
-  font-weight: 400;
+  font-weight: 900;
   text-transform: uppercase;
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
   text-align: left;
-  margin-bottom: 0.8rem;
+  margin-bottom: 3.8rem;
 }
 
 p{
   margin-bottom: 1.2rem;
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
 }
+
+@media screen and (max-width: 768px) {
+      padding: 0 0 0 30px
+    }
 `;
 // const Arrow = styled(IoMdArrowRoundForward)`
 //   margin-left: 0.05rem;
@@ -177,8 +180,8 @@ const Hero = ({ slides }) => {
                   <HeroImage src={slide.image} alt={slide.alt} />
                   <HeroContent>
                     <h1>{slide.title}</h1>
-                    <p>{slide.price}</p>
-                    <Button
+                    {/* <p>{slide.price}</p> */}
+                    {/* <Button
                       to={slide.path}
                       primary="true"
                       css={`
@@ -187,7 +190,7 @@ const Hero = ({ slides }) => {
                     >
                       {slide.label}
                       {/* <Arrow /> */}
-                    </Button>
+                    {/* </Button> */}
                   </HeroContent>
                 </HeroSlider>
               )}

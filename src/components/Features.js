@@ -158,7 +158,7 @@ const Features = () => {
                 designed to produce successful outcomes for all parties. Mike
                 holds a Bachelor’s degree from Rutgers University.
               </p>
-              <Button to="/current-opportunities">Learn More</Button>
+              {/* <Button to="/current-opportunities">Learn More</Button> */}
             </Content>
           </ColumnLeft>
           <ColumnRight>

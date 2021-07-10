@@ -11,7 +11,7 @@ const Home = () => {
     <>
       <Hero slides={SliderData} />
       <InfoSection {...InfoData} />
-      <Listings />
+      {/* <Listings /> */}
       {/* <Features /> */}
       {/* <InfoSection {...InfoDataTwo} /> */}
     </>

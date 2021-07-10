@@ -6,8 +6,8 @@ import Footer from "./components/Footer";
 import { Switch, Route } from "react-router-dom";
 import Home from "./pages";
 import About from "./pages/About";
-import Rentals from "./pages/Rentals";
-import Homes from "./pages/Homes";
+// import Rentals from "./pages/Rentals";
+// import Homes from "./pages/Homes";
 import Contact from "./pages/Contact";
 
 function App() {
