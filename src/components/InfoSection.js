@@ -72,9 +72,13 @@ const InfoSection = ({
       <Container>
         <ColumnLeft>
           <h1>{heading}</h1>
+          <br />
           <p>{paragraphOne}</p>
           <p>{paragraphTwo}</p>
-          <Button to="/about-us" primary="true">
+          <Button
+            to="/http://www.hmala.com/current-opportunities.html"
+            primary="true"
+          >
             {buttonLabel}
           </Button>
         </ColumnLeft>

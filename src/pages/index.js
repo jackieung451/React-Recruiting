@@ -1,10 +1,11 @@
 import React from "react";
 // import Features from "../components/Features";
 import Hero from "../components/Hero";
-import Listings from "../components/Listings";
+// import Listings from "../components/Listings";
 import { InfoData } from "../data/InfoData";
 import { SliderData } from "../data/SliderData";
 import InfoSection from "../components/InfoSection";
+// import Explore from "../components/Explore";
 
 const Home = () => {
   return (
