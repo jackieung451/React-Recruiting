@@ -26,7 +26,7 @@ const ColumnLeft = styled.div`
   flex-wrap: wrap;
   margin: 0px -15px;
   justify-content: flex-start;
-  ${"" /* padding: 1rem; */}
+  padding: 1rem;
 `;
 
 const Content = styled.div`
@@ -76,6 +76,11 @@ const Image = styled.img`
   height: 100%;
   width: 100%;
   object-fit: cover;
+  @media screen and (max-width: 768px) {
+    ${"" /* flex: 0 0 100%; */}
+    max-width: 100%;
+    margin-top: 60px;
+  }
 `;
 
 const Features = () => {
