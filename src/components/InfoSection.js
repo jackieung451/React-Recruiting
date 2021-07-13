@@ -5,7 +5,7 @@ import { Button } from "./Button";
 const Section = styled.section`
   width: 100%;
   height: 100%;
-  padding: 4rem 0rem;
+  padding: 3.5rem 0rem;
 `;
 
 const Container = styled.div`
@@ -25,7 +25,7 @@ const ColumnLeft = styled.div`
   justify-content: center;
   align-items: flex-start;
   line-height: 1.4;
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
   order: ${({ reverse }) => (reverse ? "2" : "1")};
 
   h1 {
@@ -38,7 +38,7 @@ const ColumnLeft = styled.div`
 `;
 const ColumnRight = styled.div`
   ${"" /* margin-top: 6rem; */}
-  padding: 1rem 0rem;
+  padding: 1rem 0rem 0rem 0rem;
   order: ${({ reverse }) => (reverse ? "1" : "2")};
   display: flex;
   justify-content: center;
@@ -56,7 +56,7 @@ const ColumnRight = styled.div`
     @media screen and (max-width: 768px) {
       width: 90%;
       height: 90%;
-      margin-top: 45px;
+      margin-top: 75px;
     }
   }
 `;
