@@ -77,12 +77,13 @@ const InfoSection = ({
           <br />
           <p>{paragraphOne}</p>
           <p>{paragraphTwo}</p>
-          <Button
-            to="/http://www.hmala.com/current-opportunities.html"
-            primary="true"
+          <a
+            href="https://www2.pcrecruiter.net/pcrbin/regmenu.aspx?uid=hanna%20mitchell%20and%20associates.hannamitchellandassociates"
+            rel="noopener noreferrer"
+            target="_blank"
           >
-            {buttonLabel}
-          </Button>
+            Learn More
+          </a>
         </ColumnLeft>
         <ColumnRight reverse={reverse}>
           <img src={image} alt="recruiting" />
