@@ -9,6 +9,7 @@ import About from "./pages/About";
 // import Rentals from "./pages/Rentals";
 // import Homes from "./pages/Homes";
 import Contact from "./pages/Contact";
+import CurrentOpportunities from "./pages/CurrentOpportunities";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,6 +27,7 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/home" component={Home} />
         <Route path="/about-us" component={About} />
+        <Route path="/current-opportunities" component={CurrentOpportunities} />
         {/* <Route path="/rentals" component={Rentals} /> */}
         <Route path="/contact" component={Contact} />
       </Switch>
