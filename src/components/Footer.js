@@ -53,12 +53,12 @@ const Container = styled.div`
 //   }
 // `;
 const FooterInfo = styled.div`
-  padding: 2rem;
-  max-width: 50vw;
+  padding: 1rem;
+  max-width: 500px;
   line-height: 3;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: auto;
 
   a {
@@ -67,9 +67,10 @@ const FooterInfo = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    padding: 1rem 1rem;
+    padding: 1rem 2px 0rem 2px;
     min-width: 100vw;
     margin: 0 0 0 0;
+    justify-content: space-between;
   }
 `;
 // const FooterBottom = styled.div`
