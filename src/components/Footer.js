@@ -53,7 +53,7 @@ const Container = styled.div`
 //   }
 // `;
 const FooterInfo = styled.div`
-  padding: 1rem;
+  padding: 2rem;
   max-width: 500px;
   line-height: 3;
   display: flex;
