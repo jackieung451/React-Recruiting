@@ -9,6 +9,11 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  ${
+    "" /* min-height: 900px
+  margin-bottom: 10px; */
+  }
+  ${"" /* padding-bottom: 8rem; */}
 `;
 
 const Container = styled.div`
@@ -72,10 +77,13 @@ const ColumnRight = styled.div`
     left: 0;
   }
 `;
+
 const Image = styled.img`
   height: 100%;
   width: 100%;
   object-fit: cover;
+  margin-bottom: 60px;
+
   @media screen and (max-width: 768px) {
     ${"" /* flex: 0 0 100%; */}
     max-width: 100%;

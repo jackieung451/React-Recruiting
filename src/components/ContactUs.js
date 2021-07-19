@@ -183,6 +183,13 @@ const ColumnLeft = styled.div`
   margin: 0px -15px;
   justify-content: flex-start;
   padding: 1rem;
+
+  @media screen and (max-width: 768px) {
+    iframe {
+      min-width: 200px;
+      max-width: 1020px;
+    }
+  }
 `;
 
 const Content = styled.div`
@@ -214,7 +221,7 @@ const Content = styled.div`
 const ColumnRight = styled.div`
   position: absolute;
   top: 0px;
-  right: 0;
+  right: 0px;
   max-width: 850px;
   height: 100%;
   width: 45%;
@@ -235,7 +242,9 @@ const Image = styled.img`
   @media screen and (max-width: 768px) {
     ${"" /* flex: 0 0 100%; */}
     max-width: 100%;
+
     margin-top: 60px;
+    padding-bottom: 40px;
   }
 `;
 

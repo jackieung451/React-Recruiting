@@ -24,15 +24,15 @@ const Container = styled.div`
   ${"" /* padding: 2rem; */}
 `;
 
-const FooterTop = styled.div`
-  display: flex;
-  flex-direction: row;
-  ${"" /* padding: 4rem 0rem; */}
+// const FooterTop = styled.div`
+//   display: flex;
+//   flex-direction: row;
+/* padding: 4rem 0rem; */
 
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-  }
-`;
+//   @media screen and (max-width: 768px) {
+//     flex-direction: column;
+//   }
+// `;
 // const Quote = styled.div`
 //   flex: 1;
 //   padding: 2rem 5rem;
@@ -54,7 +54,7 @@ const FooterTop = styled.div`
 // `;
 const FooterInfo = styled.div`
   padding: 2rem;
-  max-width: 500px;
+  max-width: 50vw;
   line-height: 3;
   display: flex;
   flex-direction: row;
@@ -68,16 +68,18 @@ const FooterInfo = styled.div`
 
   @media screen and (max-width: 768px) {
     padding: 1rem 1rem;
+    min-width: 100vw;
+    margin: 0 0 0 0;
   }
 `;
-const FooterBottom = styled.div`
-  display: flex;
-  padding: 2rem 0rem;
+// const FooterBottom = styled.div`
+//   display: flex;
+//   padding: 2rem 0rem;
 
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-  }
-`;
+//   @media screen and (max-width: 768px) {
+//     flex-direction: column;
+//   }
+// `;
 
 // const SocialIcons = styled.div`
 //   display: flex;
@@ -124,13 +126,13 @@ const Footer = () => {
   return (
     <Section>
       <Container>
-        <FooterTop>
-          {/* <Quote>
+        {/* <FooterTop> */}
+        {/* <Quote>
             <h3>Let's Find Your Dream Career</h3>
           </Quote> */}
-        </FooterTop>
+        {/* </FooterTop> */}
         <FooterInfo>
-          <h4>Contact Us</h4>
+          <Link to="/contact">Contact Us</Link>
           <Link to="/">Home</Link>
           <Link to="/about-us">About Us</Link>
           <Link to="/current-opportunities">Current Opportunities</Link>
@@ -147,9 +149,9 @@ const Footer = () => {
             <Link to="/homes">Canada</Link>
           </FooterInfo> */}
 
-        <FooterBottom>
-          {/* <SocialIcons> */}
-          {/* <a
+        {/* <FooterBottom> */}
+        {/* <SocialIcons> */}
+        {/* <a
               href="//www.google.com"
               rel="noopener noreferrer"
               target="_blank"
@@ -177,13 +179,13 @@ const Footer = () => {
             >
               <LinkedIn />
             </a> */}
-          {/* </SocialIcons> */}
-          {/* <Contact>
+        {/* </SocialIcons> */}
+        {/* <Contact>
             <Button to="/contact-us">
               Let's Chat <IoMdArrowRoundForward />
             </Button>
           </Contact> */}
-        </FooterBottom>
+        {/* </FooterBottom> */}
       </Container>
     </Section>
   );

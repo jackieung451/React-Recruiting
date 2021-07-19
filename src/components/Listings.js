@@ -57,15 +57,17 @@ const InfoRow = styled.div`
   display: flex;
   flex-direction: row;
   width: 1200px;
-  ${"" /* justify-content: space-between; */}
   margin: auto;
+  ${"" /* justify-content: space-between; */}
+
   ${"" /* padding: 1rem 0rem; */} @media screen and (max-width: 768px) {
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-around;
+    ${"" /* justify-content: flex-start; */}
     align-items: flex-start;
   }
   @media screen and (max-width: 768px) {
-    width: 800px;
+    max-width: 700px;
     ${
       "" /* display: grid;
     grid-gap: 1rem;
@@ -81,8 +83,10 @@ const InfoWrap = styled.div`
     "" /* justify-content: space around;
   margin: auto; */
   }
-  padding: 0rem 1rem;
-  min-height: 550px;
+  padding: 0rem 1rem 0 1rem;
+  min-height: 270px;
+  max-height: 500px;
+  width: 100vw;
   height: 100%;
   margin-bottom: 0;
 
@@ -117,8 +121,12 @@ const Image = styled.img`
     height: 100%;
     object-fit: cover; */
     }
-    displau: grid;
-    grid-template-columns: 1fr;
+    ${
+      "" /* displau: grid;
+    grid-template-columns: 1fr; */
+    }
+    min-width: 100px;
+    max-width: 450px;
     ${"" /* flex-direction: column; */}
     justify-content: center;
     padding: 0 0 0 0;
@@ -145,11 +153,11 @@ const Footer = styled.div`
   }
 
   display: flex;
-  flex-direction: column;
+  ${"" /* flex-direction: column; */}
   justify-content: center;
   align-items: center;
   line-height: 1.4;
-  padding: 0rem 2rem 5rem;
+  padding: 8rem 2rem 8rem;
 
   a {background: ${({ primary }) => (primary ? "#000d1a" : "#CD853F")};
 white-space: nowrap;
@@ -188,15 +196,7 @@ const Listings = () => {
             <h2>Accounting Careers</h2>
           </InfoWrap>
           <InfoWrap>
-            <Image
-              src={BusinessTwo}
-              alt="home"
-              css={`
-                @media screen and (max-width: 768px) {
-                  margin-top: 0px;
-                }
-              `}
-            />
+            <Image src={BusinessTwo} alt="home" />
             <h2>Finance Careers</h2>
           </InfoWrap>
         </InfoRow>
