@@ -278,7 +278,7 @@ const Listings = () => {
     <Section>
       <Container>
         <Heading>
-          <h1>View Career Oportunities</h1>
+          <h1>View Career Opportunities</h1>
         </Heading>
         <InfoRow>
           <InfoWrap>
