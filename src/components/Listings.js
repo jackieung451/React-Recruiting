@@ -18,6 +18,9 @@ const Section = styled.section`
 const Container = styled.div`
   height: 100%;
   width: 100%;
+  @media screen and (max-width: 320px) {
+    margin-bottom: 6rem;
+  }
   ${"" /* padding: 2rem 1rem; */}
   ${
     "" /* background: #fff;
@@ -35,36 +38,49 @@ const Container = styled.div`
     }
     ${"" /* line-height: 1.4; */}
     ${"" /* padding: 0rem 2rem; */}
-    order: ${({ reverse }) => (reverse ? "2" : "1")};
+    ${"" /* order: ${({ reverse }) => (reverse ? "2" : "1")}; */}
   }
 `;
 const Heading = styled.div`
-  display: grid;
-
+  ${
+    "" /* display: grid;
+  grid-template-columns: 1fr; */
+  }
+  display: flex;
   justify-content: center;
   font-size: 1.5rem;
-  padding: 2.5rem 1rem;
+  padding: 4rem 1rem 0rem 1rem;
 
   h1 {
     margin-top: 2rem;
   }
   ${"" /* margin-bottom: 40px; */}
   @media screen and (max-width: 768px) {
-    text-align: start;
+    text-align: center;
   }
 `;
 const InfoRow = styled.div`
-  display: flex;
-  flex-direction: row;
-  width: 1200px;
+  ${
+    "" /* display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center; */
+  }
+  font-size: 1.5rem;
+  padding: 2.5rem 1rem;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
   margin: auto;
+
   ${"" /* justify-content: space-between; */}
 
   ${"" /* padding: 1rem 0rem; */} @media screen and (max-width: 768px) {
-    flex-direction: column;
-    justify-content: space-around;
+    ${
+      "" /* flex-direction: column;
+    justify-content: space-around; */
+    }
     ${"" /* justify-content: flex-start; */}
-    align-items: flex-start;
+    ${"" /* align-items: flex-start; */}
   }
   @media screen and (max-width: 768px) {
     max-width: 700px;
@@ -75,7 +91,11 @@ const InfoRow = styled.div`
     }
   }
 `;
+
 const InfoWrap = styled.div`
+  display: flex;
+  justify-content: center;
+
   ${"" /* display: inline-block; */}
   ${"" /* margin: 0 0 0 12rem; */}
   
@@ -90,15 +110,15 @@ const InfoWrap = styled.div`
   height: 100%;
   margin-bottom: 0;
 
-  h2 {
-    ${"" /* margin-bottom: 1rem; */}
-    font-weight: 400;
+  ${"" /* h2 { */}
+  ${"" /* margin-bottom: 1rem; */}
+    ${"" /* font-weight: 400; */}
     ${
-      "" /* display: block;
+    "" /* display: block;
     justify-content: space-around;
     margin: auto; */
-    }
   }
+  ${"" /* } */}
   @media screen and (max-width: 768px) {
     ${"" /* margin-bottom: 0rem; */}
   }
@@ -112,10 +132,26 @@ const Image = styled.img`
   width: 100%;
   height: 100%;
   max-width: 600px;
-  max-height: 400px;
+  ${"" /* max-height: 400px; */}
   object-fit: cover;
+  ${
+    "" /* display: flex;
+  justify-content: center; */
+  }
 
   @media screen and (max-width: 768px) {
+    justify-content: center;
+    padding: 0 5rem 0 0;
+  }
+
+  @media screen and (max-width: 540px) {
+    padding: 0 2rem 0 0;
+  }
+
+  ${
+    "" /* @media screen and (max-width: 280px) {
+    object-fit: contain; */
+  }
     ${
       "" /* width: 100%;
     height: 100%;
@@ -125,11 +161,38 @@ const Image = styled.img`
       "" /* displau: grid;
     grid-template-columns: 1fr; */
     }
-    min-width: 100px;
-    max-width: 450px;
+    ${
+      "" /* min-width: 100px;
+    max-width: 450px; */
+    }
     ${"" /* flex-direction: column; */}
-    justify-content: center;
-    padding: 0 0 0 0;
+    
+
+    ${
+      "" /* a {
+      background: ${({ primary }) => (primary ? "#000d1a" : "#CD853F")};
+      white-space: nowrap;
+      outline: none;
+      border: none;
+      min-width: 100px;
+      max-width: 200px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.3s; */
+
+      /* display: flex;
+      justify-content: center; */
+
+      /* align-items: center;
+      padding: 16px 40px;
+      color: #000d1a;
+      font-size: 20px;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+    } */
+    }
   }
   ${"" /* margin-bottom: 1rem; */}
 `;
@@ -145,62 +208,95 @@ const Image = styled.img`
 // };`;
 
 const Footer = styled.div`
-  ${
-    "" /* display: grid;
+  display: flex;
+  justify-content: center;
+
+  a {
+    background: #cd853f;
+    white-space: nowrap;
+    outline: none;
+    border: none;
+    min-width: 100px;
+    max-width: 200px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 24px;
+    color: #000d1a;
+    font-size: 14px;
+    margin-top: 2rem;
+
+    &:hover {
+      transform: translateY(-2px);
+
+     
+  }
+  
+`;
+
+/* display: grid;
   justify-content: center;
   align-items: flex-start;
   padding: 0 0 2rem 0; */
-  }
 
-  display: flex;
-  ${"" /* flex-direction: column; */}
-  justify-content: center;
-  align-items: center;
-  line-height: 1.4;
-  padding: 8rem 2rem 8rem;
+//   display: flex;
+//   ${"" /* flex-direction: column; */}
+//   justify-content: center;
+//   align-items: center;
+//   line-height: 1.4;
+//   padding: 8rem 2rem 8rem;
 
-  a {background: ${({ primary }) => (primary ? "#000d1a" : "#CD853F")};
-white-space: nowrap;
-outline: none;
-border: none;
-min-width: 100px;
-max-width: 200px;
-cursor: pointer;
-text-decoration: none;
-transition: 0.3s;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: ${({ big }) => (big ? "16px 40px" : "14px 24px")};
-color: ${({ primary }) => (primary ? "#fff" : "#000d1a")};
-font-size: ${({ big }) => (big ? "20px" : "14px")};
+//   a {background: ${({ primary }) => (primary ? "#000d1a" : "#CD853F")};
+// white-space: nowrap;
+// outline: none;
+// border: none;
+// min-width: 100px;
+// max-width: 200px;
+// cursor: pointer;
+// text-decoration: none;
+// transition: 0.3s;
+// display: flex;
+// justify-content: center;
+// align-items: center;
+// padding: ${({ big }) => (big ? "16px 40px" : "14px 24px")};
+// color: ${({ primary }) => (primary ? "#fff" : "#000d1a")};
+// font-size: ${({ big }) => (big ? "20px" : "14px")};
 
-&:hover {
-  transform: translateY(-2px);
-}}
+// &:hover {
+//   transform: translateY(-2px);
+// }}
 
-  @media screen and (max-width: 768px) {
-    margin-bottom: 2rem;
-`;
+//   @media screen and (max-width: 768px) {
+//     margin-bottom: 2rem;
+// `;
 
 const Listings = () => {
   return (
     <Section>
       <Container>
         <Heading>
-          <h1>View Our Newest Job Openings</h1>
+          <h1>View Career Oportunities</h1>
         </Heading>
         <InfoRow>
           <InfoWrap>
-            <Image src={BusinessOne} alt="home" />
-            <h2>Accounting Careers</h2>
-          </InfoWrap>
-          <InfoWrap>
             <Image src={BusinessTwo} alt="home" />
-            <h2>Finance Careers</h2>
           </InfoWrap>
+          <Footer>
+            <a
+              href="https://www2.pcrecruiter.net/pcrbin/regmenu.aspx?uid=hanna%20mitchell%20and%20associates.hannamitchellandassociates"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Click Here
+            </a>
+          </Footer>
         </InfoRow>
-        <Footer>
+
+        {
+          "" /* <Footer>
           <a
             href="https://www2.pcrecruiter.net/pcrbin/regmenu.aspx?uid=hanna%20mitchell%20and%20associates.hannamitchellandassociates"
             rel="noopener noreferrer"
@@ -208,7 +304,8 @@ const Listings = () => {
           >
             Learn More
           </a>
-        </Footer>
+        </Footer> */
+        }
       </Container>
     </Section>
   );
